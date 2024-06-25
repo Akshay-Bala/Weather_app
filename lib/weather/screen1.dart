@@ -88,7 +88,7 @@ class _Screeen1State extends State<Screeen1> {
               Container(
                 child: ListTile(
                   leading: Icon(
-                    Icons.history,
+                    Icons.brightness_6_rounded,
                     color: textColor,
                   ),
                   title: Padding(
@@ -349,6 +349,51 @@ class _Screeen1State extends State<Screeen1> {
             SizedBox(
               height: 10,
             ),
+            Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(9),
+                    topRight: Radius.circular(9),
+                  ),
+                  color: containerColor),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Wed',
+                        style: GoogleFonts.quantico(
+                          color: textColor,
+                        ),
+                      ),
+                      Text(
+                        '9 PM',
+                        style: GoogleFonts.quantico(
+                          color: textColor,
+                        ),
+                      )
+                    ],
+                  ),
+                  Icon(
+                    Icons.cloud,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  Text(
+                    '26\u00B0',
+                    style: GoogleFonts.quantico(
+                      color: textColor,
+                    ),
+                  ),
+                  Text(
+                    '26\u00B0',
+                    style: GoogleFonts.quantico(
+                      color: textColor,
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
