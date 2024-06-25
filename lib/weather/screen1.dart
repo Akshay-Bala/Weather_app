@@ -5,7 +5,6 @@ import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather/weather/screen2.dart';
 
-
 class Screeen1 extends StatefulWidget {
   Screeen1({super.key});
 
@@ -24,11 +23,21 @@ class _Screeen1State extends State<Screeen1> {
 
   @override
   Widget build(BuildContext context) {
-    Color textColor = isSwitched ? Color.fromRGBO(36, 91, 130, 1) : Color.fromRGBO(255, 255, 255, 1);
-    Color backgroundColor = isSwitched ? Color.fromRGBO(204, 225, 244, 1) : Color.fromRGBO(40, 40, 40, 1);
-    Color containerColor = isSwitched ? Color.fromRGBO(176, 188, 200, 1) : Color.fromRGBO(30, 31, 33, 1);
-    Color appBarBackgroundColor = isSwitched ? Color.fromRGBO(204, 225, 244, 1) : Color.fromRGBO(42, 46, 46, 1);
-    Color drawerBackgroundColor = isSwitched ? Color.fromRGBO(204, 225, 244, 1) : Color.fromRGBO(48, 48, 48, 1);
+    Color textColor = isSwitched
+        ? Color.fromRGBO(36, 91, 130, 1)
+        : Color.fromRGBO(255, 255, 255, 1);
+    Color backgroundColor = isSwitched
+        ? Color.fromRGBO(204, 225, 244, 1)
+        : Color.fromRGBO(40, 40, 40, 1);
+    Color containerColor = isSwitched
+        ? Color.fromRGBO(176, 188, 200, 1)
+        : Color.fromRGBO(30, 31, 33, 1);
+    Color appBarBackgroundColor = isSwitched
+        ? Color.fromRGBO(204, 225, 244, 1)
+        : Color.fromRGBO(42, 46, 46, 1);
+    Color drawerBackgroundColor = isSwitched
+        ? Color.fromRGBO(204, 225, 244, 1)
+        : Color.fromRGBO(48, 48, 48, 1);
 
     return Scaffold(
       appBar: AppBar(
@@ -50,33 +59,32 @@ class _Screeen1State extends State<Screeen1> {
           child: ListView(
             children: [
               InkWell(
-  onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => Screen2(isDarkMode: isSwitched),
-      ),
-    );
-  },
-  child: Container(
-    child: ListTile(
-      leading: Icon(
-        Icons.history,
-        color: textColor,
-      ),
-      title: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Text(
-          "History",
-          style: GoogleFonts.quantico(
-            color: textColor,
-          ),
-        ),
-      ),
-    ),
-  ),
-),
-
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Screen2(isDarkMode: isSwitched),
+                    ),
+                  );
+                },
+                child: Container(
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.history,
+                      color: textColor,
+                    ),
+                    title: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "History",
+                        style: GoogleFonts.quantico(
+                          color: textColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               Container(
                 child: ListTile(
                   leading: Icon(
@@ -95,8 +103,8 @@ class _Screeen1State extends State<Screeen1> {
                   trailing: Switch(
                     value: isSwitched,
                     onChanged: toggleSwitch,
-                    activeColor:  Colors.blue[200],
-                    inactiveThumbColor:Colors.white,
+                    activeColor: Colors.blue[200],
+                    inactiveThumbColor: Colors.white,
                     inactiveTrackColor: drawerBackgroundColor,
                   ),
                 ),
@@ -165,8 +173,8 @@ class _Screeen1State extends State<Screeen1> {
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: containerColor,
+                  borderRadius: BorderRadius.circular(8),
+                  color: containerColor,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -321,8 +329,8 @@ class _Screeen1State extends State<Screeen1> {
                           height: 134,
                           width: 170,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: containerColor,
+                            borderRadius: BorderRadius.circular(10),
+                            color: containerColor,
                           ),
                         ),
                       ),
@@ -347,8 +355,6 @@ class _Screeen1State extends State<Screeen1> {
     );
   }
 }
-
-
 
 List<Map<String, dynamic>> dailyWeather = [
   {"time": "09:00AM", "degre": "34\u00B0", "water": "49%", "air": "3km/h"},
