@@ -9,23 +9,31 @@ class Screen2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color appBarBackgroundColor =
-        isDarkMode ? Color.fromRGBO(176, 188, 200, 1) : Color.fromRGBO(42, 46, 46, 1);
-    Color containerColor =
-        isDarkMode ? Color.fromRGBO(176, 188, 200, 1) : Color.fromRGBO(30, 31, 33, 1);
-    Color textColor = isDarkMode ? Color.fromRGBO(36, 91, 130, 1) : Colors.white;
+    Color appBarBackgroundColor = isDarkMode
+        ? Color.fromRGBO(176, 188, 200, 1)
+        : Color.fromRGBO(42, 46, 46, 1);
+    Color containerColor = isDarkMode
+        ? Color.fromRGBO(176, 188, 200, 1)
+        : Color.fromRGBO(30, 31, 33, 1);
+    Color textColor =
+        isDarkMode ? Color.fromRGBO(36, 91, 130, 1) : Colors.white;
 
     return Scaffold(
-      appBar: AppBar(
-        foregroundColor: Color.fromRGBO(255, 202, 45, 1),
-        backgroundColor: appBarBackgroundColor,
-        title: Text(
-          "History",
+      appBar: PreferredSize(
+        preferredSize: Size(30, 153),
+        child: AppBar(
+          foregroundColor: Color.fromRGBO(255, 202, 45, 1),
+          backgroundColor: appBarBackgroundColor,
+          title: Text(
+            "History",
+          ),
+          centerTitle: true,
         ),
-        centerTitle: true,
       ),
       body: Container(
-        color: isDarkMode ? Color.fromRGBO(213, 230, 246, 1) : Color.fromRGBO(42, 46, 46, 1),
+        color: isDarkMode
+            ? Color.fromRGBO(213, 230, 246, 1)
+            : Color.fromRGBO(42, 46, 46, 1),
         child: ListView.builder(
           itemCount: 6,
           itemBuilder: (context, index) {
